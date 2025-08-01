@@ -102,15 +102,3 @@ numpy
 **Nayan**  
 
 ---
-
-### 🗂️ Suggested Folder Structure
-
-```
-LINKEDIN VIRAL PROJECT USING CV2/
-├── Virtual_Mouse_Using_CV2.py
-├── cv2_paint.py
-├── requirements.txt
-├── README.md
-
-```
-
