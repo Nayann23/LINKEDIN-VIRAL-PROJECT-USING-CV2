@@ -1,6 +1,6 @@
 # 🖱️ Virtual Mouse & Air Paint using OpenCV + MediaPipe
 
-This project contains two exciting gesture-based applications using Python, OpenCV, MediaPipe, and PyAutoGUI:
+This project contains two exciting gesture-based applications built using Python, OpenCV, MediaPipe, and PyAutoGUI:
 
 1. 🎯 **Virtual Mouse**: Control your system mouse using just hand gestures!
 2. 🎨 **CV2 Paint**: Draw in the air using your finger like a digital paintbrush.
@@ -20,29 +20,29 @@ This project contains two exciting gesture-based applications using Python, Open
 ## 🛠️ Features
 
 ### ✅ Virtual Mouse (`Virtual_Mouse_Using_CV2.py`)
-- Move cursor with your **index finger**
-- **Single click**: Pinch (index + thumb)
-- **Double click**: Pinch + middle finger
+- Move the cursor using your **index finger**
+- **Single click**: Pinch gesture (index + thumb)
+- **Double click**: Pinch with **middle finger** extended
 - Smooth mouse movement with adjustable sensitivity
-- Works full-screen with webcam tracking
+- Works in full-screen mode using webcam tracking
 
 ### ✅ CV2 Paint (`cv2_paint.py`)
-- Draw with your finger in air
-- Select between 4–5 preset **colors**
-- Use **eraser gesture**
-- Smart detection to avoid continuous tracking from last point
-- Color selection and brush gesture support
+- Draw with your finger in the air
+- Choose from 4–5 preset **colors**
+- Use the **eraser gesture** to remove parts of the drawing
+- Smart detection to avoid continuous drawing from the last point
+- Supports color selection and brush gestures
 
 ---
 
 ## ✋ Hand Gestures
 
-| Gesture                       | Action                  |
-|------------------------------|--------------------------|
-| ☝️ Index finger only         | Move cursor              |
-| 🤏 Index + Thumb             | Single click             |
-| 🤏 + ✌️ Middle finger        | Double click             |
-| ✋ All fingers together      | Eraser (in Paint mode)   |
+| Gesture                        | Action                   |
+|-------------------------------|--------------------------|
+| ☝️ Index finger only          | Move cursor              |
+| 🤏 Index + Thumb              | Single click             |
+| 🤏 + ✌️ Middle finger         | Double click             |
+| ✋ All fingers extended        | Eraser (in Paint mode)   |
 
 ---
 
@@ -59,9 +59,9 @@ cd linkedIn-viral-project-using-cv2
 pip install -r requirements.txt
 ```
 
-> ⚠️ **Note**: If `mediapipe` doesn't install due to Python version, use Python **3.9** for compatibility.
+> ⚠️ **Note**: If `mediapipe` fails to install due to Python version compatibility, use Python **3.9** for best results.
 
-### 3. Run the Apps
+### 3. Run the Applications
 ```bash
 # For Virtual Mouse
 python Virtual_Mouse_Using_CV2.py
@@ -72,8 +72,7 @@ python cv2_paint.py
 
 ---
 
-## 📦 requirements.txt
-
+## 📦 `requirements.txt`
 ```txt
 opencv-python
 mediapipe
@@ -94,6 +93,4 @@ numpy
 
 ## 👨‍💻 Author
 
-**Nayan**  
-
----
+**Nayan**
