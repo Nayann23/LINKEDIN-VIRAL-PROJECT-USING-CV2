@@ -101,8 +101,7 @@ numpy
 
 **Nayan**  
 Beginner Python developer building real-world computer vision projects to land a software job.  
-Connect with me on [GitHub](https://github.com/your-username) *(update this)*
-
+Connect with me on [GitHub](https://github.com/Nayann23/LINKEDIN-VIRAL-PROJECT-USING-CV2.git) 
 ---
 
 ## 📄 License
@@ -126,8 +125,3 @@ LINKEDIN VIRAL PROJECT USING CV2/
 
 ```
 
-### 🔗 Suggested GitHub Link Format
-
-```text
-[https://github.com/nayan-tech/linkedIn-viral-project-using-cv2](https://github.com/Nayann23/LINKEDIN-VIRAL-PROJECT-USING-CV2.git)
-```
