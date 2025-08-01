@@ -46,11 +46,6 @@ This project contains two exciting gesture-based applications using Python, Open
 
 ---
 
-## 📸 Screenshots (Optional)
-_Add screenshots or a screen recording GIF to show how it works visually._
-
----
-
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
