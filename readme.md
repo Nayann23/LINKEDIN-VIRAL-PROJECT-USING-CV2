@@ -55,7 +55,7 @@ _Add screenshots or a screen recording GIF to show how it works visually._
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/linkedIn-viral-project-using-cv2.git
+git clone https://github.com/Nayann23/LINKEDIN-VIRAL-PROJECT-USING-CV2.git
 cd linkedIn-viral-project-using-cv2
 ```
 
@@ -100,19 +100,8 @@ numpy
 ## 👨‍💻 Author
 
 **Nayan**  
-Beginner Python developer building real-world computer vision projects to land a software job.  
-Connect with me on [GitHub](https://github.com/Nayann23/LINKEDIN-VIRAL-PROJECT-USING-CV2.git) 
----
-
-## 📄 License
-
-This project is licensed under the MIT License. Feel free to use, fork, and modify!
 
 ---
-
-## 📂 Suggested Repo Title
-
-**LINKEDIN VIRAL PROJECT USING CV2**
 
 ### 🗂️ Suggested Folder Structure
 
