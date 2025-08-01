@@ -2,30 +2,29 @@ import cv2
 import numpy as np
 import mediapipe as mp
 
-# Initialize mediapipe
+
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.8)
 mp_draw = mp.solutions.drawing_utils
 
-# Colors
+
 colors = [
-    (0, 0, 255),    # Red
-    (0, 255, 0),    # Green
-    (255, 0, 0),    # Blue
-    (0, 255, 255),  # Yellow
-    (255, 0, 255)   # Purple
+    (0, 0, 255),    
+    (0, 255, 0),    
+    (255, 0, 0),    
+    (0, 255, 255),  
+    (255, 0, 255)   
 ]
 eraser_color = (0, 0, 0)
 draw_color = colors[0]
 color_names = ["Red", "Green", "Blue", "Yellow", "Purple", "Eraser"]
 
-# Canvas setup
 xp, yp = 0, 0
 canvas = None
 brush_thickness = 10
 eraser_thickness = 50
 
-# Webcam
+
 cap = cv2.VideoCapture(0)
 
 def fingers_up(lm_list):
@@ -67,7 +66,7 @@ while True:
             x1, y1 = lm_list[8][1], lm_list[8][2]
             fingers = fingers_up(lm_list)
 
-            # Select mode - two fingers up
+          
             if fingers[1] and fingers[2]:
                 xp, yp = 0, 0
                 if y1 < 60:
@@ -85,7 +84,7 @@ while True:
                         draw_color = eraser_color
                 cv2.rectangle(img, (x1 - 20, y1 - 20), (x1 + 20, y1 + 20), draw_color, cv2.FILLED)
 
-            # Drawing mode - index finger only
+         
             elif fingers[1] and not fingers[2]:
                 cv2.circle(img, (x1, y1), 10, draw_color, cv2.FILLED)
                 if xp == 0 and yp == 0:
@@ -98,28 +97,28 @@ while True:
                     cv2.line(canvas, (xp, yp), (x1, y1), draw_color, brush_thickness)
                 xp, yp = x1, y1
             else:
-                xp, yp = 0, 0  # reset if not in draw mode
+                xp, yp = 0, 0 
     else:
-        xp, yp = 0, 0  # hand not detected — reset so next draw is fresh
+        xp, yp = 0, 0
 
-    # Merge canvas and webcam feed
+
     gray_canvas = cv2.cvtColor(canvas, cv2.COLOR_BGR2GRAY)
     _, inv_canvas = cv2.threshold(gray_canvas, 50, 255, cv2.THRESH_BINARY_INV)
     inv_canvas = cv2.cvtColor(inv_canvas, cv2.COLOR_GRAY2BGR)
     img = cv2.bitwise_and(img, inv_canvas)
     img = cv2.bitwise_or(img, canvas)
 
-    # Draw color bar
+
     for i, color in enumerate(colors):
         cv2.rectangle(img, (i * 100, 0), ((i + 1) * 100, 60), color, -1)
         cv2.putText(img, color_names[i], (i * 100 + 10, 45), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 2)
     cv2.rectangle(img, (500, 0), (600, 60), (50, 50, 50), -1)
     cv2.putText(img, "Eraser", (510, 45), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
 
-    # Show image
+
     cv2.imshow("Virtual Paint", img)
 
-    if cv2.waitKey(1) & 0xFF == 27:  # Press ESC to quit
+    if cv2.waitKey(1) & 0xFF == 27:
         break
 
 cap.release()
